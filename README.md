@@ -19,6 +19,7 @@ I am currently practicing coding problems on LeetCode to enhance my problem-solv
 Here are some of the problems I've solved:
 
 1. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)
+2. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
  
 
 ## Solutions
