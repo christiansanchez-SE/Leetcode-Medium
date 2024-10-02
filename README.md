@@ -21,6 +21,7 @@ Here are some of the problems I've solved:
 1. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)
 2. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
 3. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
+4. [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/)
  
 
 ## Solutions
