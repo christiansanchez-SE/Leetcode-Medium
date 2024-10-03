@@ -22,7 +22,7 @@ Here are some of the problems I've solved:
 2. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
 3. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
 4. [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/)
- 
+5. [Reverse Integer](https://leetcode.com/problems/reverse-integer/description/)
 
 ## Solutions
 
