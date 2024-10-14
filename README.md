@@ -23,6 +23,7 @@ Here are some of the problems I've solved:
 3. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
 4. [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/)
 5. [Reverse Integer](https://leetcode.com/problems/reverse-integer/description/)
+6. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/)
 
 ## Solutions
 
