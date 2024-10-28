@@ -25,6 +25,7 @@ Here are some of the problems I've solved:
 5. [Reverse Integer](https://leetcode.com/problems/reverse-integer/description/)
 6. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/)
 7. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
+8. [3Sum](https://leetcode.com/problems/3sum/)
 
 ## Solutions
 
