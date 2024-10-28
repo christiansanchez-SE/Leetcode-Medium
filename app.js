@@ -290,8 +290,6 @@ var reverse = function(x) {
 // Rounding: If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then round the integer to remain in the range. Specifically, integers less than -231 should be rounded to -231, and integers greater than 231 - 1 should be rounded to 231 - 1.
 // Return the integer as the final result.
 
- 
-
 // Example 1:
 
 // Input: s = "42"
@@ -359,8 +357,6 @@ var reverse = function(x) {
 
 // Reading stops at the first non-digit character 'w'.
 
- 
-
 // Constraints:
 
 // 0 <= s.length <= 200
@@ -403,6 +399,59 @@ var myAtoi = function(s) {
     if (result > INT_MAX) return INT_MAX;
     
     return result;
+};
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+// Container With Most Water
+
+// You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+// Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+// Return the maximum amount of water a container can store.
+
+// Notice that you may not slant the container.
+
+// Example 1:
+// Input: height = [1,8,6,2,5,4,8,3,7]
+// Output: 49
+// Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+
+// Example 2:
+// Input: height = [1,1]
+// Output: 1
+
+// Constraints:
+
+// n == height.length
+// 2 <= n <= 105
+// 0 <= height[i] <= 104
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+var maxArea = function(height) {
+    let left = 0;
+    let right = height.length - 1;
+    let maxArea = 0;
+    
+    while (left < right) {
+        // Calculate the current area
+        const currentArea = Math.min(height[left], height[right]) * (right - left);
+        // Update maxArea if currentArea is larger
+        maxArea = Math.max(maxArea, currentArea);
+        
+        // Move the pointer with the shorter height
+        if (height[left] < height[right]) {
+            left += 1;
+        } else {
+            right -= 1;
+        }
+    }
+    
+    return maxArea;
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
