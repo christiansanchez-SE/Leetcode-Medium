@@ -26,6 +26,7 @@ Here are some of the problems I've solved:
 6. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/)
 7. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
 8. [3Sum](https://leetcode.com/problems/3sum/)
+9. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/description/)
 
 ## Solutions
 
