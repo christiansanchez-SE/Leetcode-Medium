@@ -27,6 +27,8 @@ Here are some of the problems I've solved:
 7. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/description/)
 8. [3Sum](https://leetcode.com/problems/3sum/)
 9. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/description/)
+10. [3Sum Closest](https://leetcode.com/problems/3sum-closest/description/)
+11. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
 
 ## Solutions
 
