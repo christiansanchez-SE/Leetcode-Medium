@@ -772,3 +772,55 @@ console.log(letterCombinations("2")); // ["a", "b", "c"]
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// Generate Parentheses
+
+// Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+// Example 1:
+// Input: n = 3
+// Output: ["((()))","(()())","(())()","()(())","()()()"]
+
+// Example 2:
+// Input: n = 1
+// Output: ["()"]
+ 
+
+// Constraints:
+
+// 1 <= n <= 8
+
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var generateParenthesis = function(n) {
+    const result = [];
+
+    const backtrack = (current, openCount, closeCount) => {
+        // Base case: if the current string is complete
+        if (current.length === 2 * n) {
+            result.push(current);
+            return;
+        }
+
+        // If we can add an open parenthesis, do so
+        if (openCount < n) {
+            backtrack(current + "(", openCount + 1, closeCount);
+        }
+
+        // If we can add a close parenthesis, do so
+        if (closeCount < openCount) {
+            backtrack(current + ")", openCount, closeCount + 1);
+        }
+    };
+
+    // Start the backtracking process
+    backtrack("", 0, 0);
+    return result;
+};
+
+console.log(generateParenthesis(3));
+// Output: ["((()))", "(()())", "(())()", "()(())", "()()()"]
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
