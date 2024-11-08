@@ -29,6 +29,7 @@ Here are some of the problems I've solved:
 9. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/description/)
 10. [3Sum Closest](https://leetcode.com/problems/3sum-closest/description/)
 11. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
+12. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description/)
 
 ## Solutions
 
