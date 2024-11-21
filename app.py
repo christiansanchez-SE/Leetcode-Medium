@@ -817,3 +817,76 @@ print(solution.generateParenthesis(3))
 # Output: ["((()))", "(()())", "(())()", "()(())", "()()()"]
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+
+# Divide Two Integers
+
+# Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.
+
+# The integer division should truncate toward zero, which means losing its fractional part. For example, 8.345 would be truncated to 8, and -2.7335 would be truncated to -2.
+
+# Return the quotient after dividing dividend by divisor.
+
+# Example 1:
+# Input: dividend = 10, divisor = 3
+# Output: 3
+# Explanation: 10/3 = 3.33333.. which is truncated to 3.
+
+# Example 2:
+# Input: dividend = 7, divisor = -3
+# Output: -2
+# Explanation: 7/-3 = -2.33333.. which is truncated to -2.
+
+# Constraints:
+
+# -231 <= dividend, divisor <= 231 - 1
+# divisor != 0
+
+class Solution(object):
+    def divide(self, dividend, divisor):
+        """
+        :type dividend: int
+        :type divisor: int
+        :rtype: int
+        """
+        # Handle edge cases for overflow
+        MAX_INT = 2**31 - 1
+        MIN_INT = -2**31
+        
+        if dividend == MIN_INT and divisor == -1:
+            return MAX_INT  # Avoid overflow
+        
+        if dividend == MIN_INT and divisor == 1:
+            return MIN_INT  # Special case
+        
+        # Determine the sign of the result
+        is_negative = (dividend < 0) != (divisor < 0)
+        
+        # Use absolute values for calculation
+        abs_dividend = abs(dividend)
+        abs_divisor = abs(divisor)
+        
+        quotient = 0
+        
+        # Perform bitwise division
+        for i in range(31, -1, -1):
+            if (abs_dividend >> i) >= abs_divisor:
+                abs_dividend -= abs_divisor << i
+                quotient += 1 << i
+        
+        # Apply the sign to the result
+        quotient = -quotient if is_negative else quotient
+        
+        # Ensure the result is within the 32-bit integer range
+        return max(MIN_INT, min(MAX_INT, quotient))
+    
+    solution = Solution()
+
+    print(solution.divide(10, 3))  # Output: 3
+    print(solution.divide(7, -3))  # Output: -2
+    print(solution.divide(-2147483648, 1))  # Output: -2147483648
+    print(solution.divide(-2147483648, -1))  # Output: 2147483647
+    print(solution.divide(0, 1))  # Output: 0
+    print(solution.divide(1, 1))  # Output: 1
+    print(solution.divide(2147483647, 2))  # Output: 1073741823
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
